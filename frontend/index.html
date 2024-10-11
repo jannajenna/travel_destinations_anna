@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel destinations app by Anna</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">LOGO</div>
+        <div class="nav_links">
+          <a href="views/log_in.html">log in</a>
+          <a href="views/sign_up.html">sign up</a>
+          <!-- Fixed typo from sing_up -->
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h1>Discover the World,<br />One Destination at a Time.</h1>
+        <p>
+          Upload your next travel destination and let the adventure begin! Our app allows you to plan, share, and explore the most exciting locations around the globe. Whether you're dreaming of a tropical escape, a historic city, or a remote
+          getaway, simply add your destination to get personalized recommendations, tips from fellow travelers, and inspiration for your journey. With every upload, you’re one step closer to your next unforgettable experience.
+        </p>
+      </section>
+      <!-- Form -->
+      <section class="add_destination">
+        <h2>Add a new destination</h2>
+        <form id="destination_form">
+          <div class="field_form">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Title of the travel" />
+            <span class="error">Error message</span>
+          </div>
+          <div class="field_form">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="City of destination" />
+            <span class="error">Error message</span>
+          </div>
+
+          <div class="field_form">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" placeholder="Country of destination" />
+            <span class="error">Error message</span>
+          </div>
+
+          <div class="field_form">
+            <label for="date_from">Date from</label>
+            <input type="date" id="date_from" name="date_from" placeholder="Select the starting date" />
+            <span class="error">Error message</span>
+          </div>
+
+          <div class="field_form">
+            <label for="date_to">Date to</label>
+            <input type="date" id="date_to" name="date_to" placeholder="Select the ending date" />
+            <span class="error">Error message</span>
+          </div>
+
+          <div class="field_form">
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Give a brief description of the travel"></textarea>
+            <span class="error">Error message</span>
+          </div>
+
+          <button id="btn_submit" type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- List Destinations -->
+      <section class="list_destinations">
+        <h2>All destinations</h2>
+        <!-- Card Container where cards will be appended -->
+        <div class="card_container">
+          <!-- Template -->
+          <template id="card_template">
+            <div class="card">
+              <img src="./images/beach.png" alt="pacific beach" class="card_image" />
+              <div class="card_text">
+                <h6 class="card_title">Title of destination</h6>
+                <div class="card_text_location">
+                  <p class="card_city">City</p>
+                  <p>-</p>
+                  <p class="card_country">Country</p>
+                </div>
+                <div class="card_text_location">
+                  <p class="card_date_from">xx/xx/xxxx</p>
+                  <p>-</p>
+                  <p class="card_date_to">xx/xx/xxxx</p>
+                </div>
+                <p class="card_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque perspiciatis totam ipsum nam accusamus cum fugiat.</p>
+                <div class="card_buttons">
+                  <button class="edit_button">Edit</button>
+                  <button class="delete_button">Delete</button>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="./javascripts/main.js" defer type="module"></script>
+  </body>
+</html>

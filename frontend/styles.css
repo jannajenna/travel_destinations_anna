@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+:root {
+  /*color*/
+  --color-bkg: #efece5;
+  --color-primary: #143021;
+  --color-secondary: #333e49;
+  --color-accent1: #fffdff;
+  --color-accent2: #ff8340;
+  --color-accent3: #a6a6a6;
+
+  /*fonts sizes*/
+  --f-h1: 61px;
+  --f-h2: 48.8px;
+  --f-h3: 39.1px;
+  --f-h4: 32.3px;
+  --f-h5: 25px;
+  --f-h6: 20px;
+  --f-p: 1rem;
+
+  /* padding */
+  --screen-sp-s: calc(8px + 1.5625vw);
+}
+
+html {
+  background-color: var(--color-bkg);
+}
+body {
+  color: var(--color-primary);
+}
+footer {
+  height: 500px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 61px;
+}
+h2 {
+  font-size: 48.8px;
+  text-align: center;
+}
+h3 {
+  font-size: 39.1px;
+}
+h4 {
+  font-size: 32.3px;
+}
+h5 {
+  font-size: 25px;
+}
+h6 {
+  font-size: 20px;
+}
+p {
+  font-size: 16px;
+}
+
+.small_text {
+  font-size: 12.8px;
+}
+
+.btn_font {
+  font-size: 25px;
+}
+
+button {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  color: var(--color-accent1);
+  padding: 6px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+/*NAV*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 1rem;
+  margin: var(--screen-sp-s);
+}
+
+.nav_links {
+  padding-left: 4rem;
+}
+
+.error {
+  color: red;
+  text-align: right;
+}
+
+/*HERO*/
+
+.hero {
+  margin: var(--screen-sp-s);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/*FORM*/
+
+.add_destination {
+  margin: var(--screen-sp-s);
+}
+
+label {
+  font-size: var(--f-h6);
+  padding: 0 0 8px 8px;
+}
+
+input,
+textarea {
+  height: 56px;
+  border: 1px solid var(--color-accent3);
+  border-radius: 6px;
+}
+
+input::placeholder {
+  padding-left: 8px;
+}
+
+textarea::placeholder {
+  padding-left: 8px 0px 8px 0;
+}
+#destination_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field_form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-top: 2rem;
+}
+
+/*CARDS*/
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card {
+  width: 325px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card_text {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.card_text_location {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+.card_buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+}
