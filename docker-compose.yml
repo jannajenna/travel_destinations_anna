@@ -1,0 +1,25 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "3004:3004"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/travel_destinations_anna
+    depends_on:
+      - mongo
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
