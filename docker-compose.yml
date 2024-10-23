@@ -5,21 +5,17 @@ services:
       context: ./backend
     ports:
       - "3004:3004"
+    volumes:
+      - ./backend:/app
     environment:
-      - MONGO_URL=mongodb://mongo:27017/travel_destinations_anna
+      - NODE_ENV=production
     depends_on:
-      - mongo
+      - frontend
+
   frontend:
     build:
       context: ./frontend
     ports:
-      - "8080:80"
-  mongo:
-    image: mongo:latest
-    ports:
-      - "27017:27017"
+      - "80:80"
     volumes:
-      - mongo-data:/data/db
-
-volumes:
-  mongo-data:
+      - ./frontend:/usr/share/nginx/html
