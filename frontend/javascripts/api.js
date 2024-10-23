@@ -1,7 +1,7 @@
 //Handle API calls 
 
 //Geting the data fromt he back end
-const url = "http://localhost:3003/destinations";
+const url = "http://localhost:3004/destinations";
 
 
 //Get all destinations
@@ -48,7 +48,7 @@ export async function newDestination(data) {
 //Delete a destination
 export async function deleteDestination(id) {
     try {
-        const responseJson = await fetch(`http://localhost:3003/destinations/${id}`, {
+        const responseJson = await fetch(`http://localhost:3004/destinations/${id}`, {
             method: 'DELETE',
             headers: { "Content-Type": "application/json" },
         });
@@ -68,7 +68,7 @@ export async function deleteDestination(id) {
 
 export async function modifyDestination(id, data) {
     try {
-        const responseJson = await fetch(`http://localhost:3003/destinations/${id}`, {
+        const responseJson = await fetch(`http://localhost:3004/destinations/${id}`, {
             method: 'PATCH',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data),

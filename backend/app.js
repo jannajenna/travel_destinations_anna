@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // express
 const app = express();
-const port = 3003
+const port = 3004
 //const PORT = process.env.PORT || 5000;
 
 //body parser
